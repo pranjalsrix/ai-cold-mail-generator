@@ -1,0 +1,53 @@
+
+High Level Architecture
+
+1. Ai generation (core feature)
+2. Authentication (JWT + OTP)
+3. Monorepo 
+4. CI/CD
+5. Containerization
+6. Manual Api Testing
+
+Low Level Architecture
+
+1. Frontend
+⚙️ Core
+React 18 → UI framework
+🎨 UI & Styling
+Tailwind CSS → Utility-first styling
+PostCSS + Autoprefixer → CSS processing
+Heroicons → Icon library
+🔀 Routing & UX
+React Router DOM → SPA navigation
+React Hot Toast → Notifications
+🌐 API Communication
+Axios → HTTP client
+
+2. Backend
+⚙️ Core
+Node.js → Runtime
+Express.js → API framework
+🔐 Authentication & Security
+jsonwebtoken (JWT) → Auth system
+bcryptjs → Password hashing
+cors → Cross-origin control
+dotenv → Env config
+📧 Email Service
+Nodemailer → OTP emails & notifications
+🌐 External Requests
+Axios → Call AI APIs
+
+3. Ai
+Groq API
+
+4. DB
+📦 Database
+MongoDB (Atlas)
+🔗 ORM
+Mongoose → Schema + queries
+
+5. Dev Tools
+Nodemon → Auto-restart backend
+ESLint → Code linting
+Vite Dev Server → Fast dev experience
+
