@@ -91,7 +91,7 @@ For complete setup, environment variables, API testing, and deployment:
 /server      → Express backend  
 ```
 
----
+----
 
 ## 👨‍💻 Author
 
