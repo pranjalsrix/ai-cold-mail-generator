@@ -24,9 +24,22 @@ connectDB();
 
 const app = express();
 
+const allowedOrigins = process.env.FRONTEND_URLS
+  ? process.env.FRONTEND_URLS.split(',')
+  : [];
+
 app.use(cors({
-    origin: process.env.FRONTEND_URL || true,
-    credentials: true
+  origin: function (origin, callback) {
+    // allow requests with no origin (like Postman)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS not allowed: " + origin));
+    }
+  },
+  credentials: true
 }));
 
 app.use(express.json());
